@@ -1,28 +1,5 @@
-== README
+Sideprojectbot is a simple side project tracker that I created to help track Rails personal projects I am working on. It was inspired by iDoneThis.com and by the fact that Gmail, Google docs, Evernote, excel documents, and a notebook did not meet my needs.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sideprojectbot is simple. It lets you create projects, add ideas/tasks to them like a to-do list, and mark those tasks as completed when they are done.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+It will use Devise, Bootstrap and Postgresql.

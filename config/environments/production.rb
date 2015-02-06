@@ -34,6 +34,9 @@ Rails.application.configure do
   # yet still be able to expire them through the digest params.
   config.assets.digest = true
 
+# TODO configure actual URL of website on Heroku
+# config.action_mailer.default_url_options = { host:  } 
+  
   # `config.assets.precompile` and `config.assets.version` have moved to config/initializers/assets.rb
 
   # Specifies the header that your server uses for sending files.

@@ -3,4 +3,5 @@ class Project < ActiveRecord::Base
   validates :description, presence: true, length: { maximum: 500 }
   
   belongs_to :user
+  has_many :toads
 end

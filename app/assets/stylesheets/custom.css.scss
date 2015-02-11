@@ -57,3 +57,19 @@ textarea {
     text-decoration: none;
   }
 }
+
+/* HEADER */
+
+.navbar-custom {
+  background-color: white;
+  border-bottom: 1px solid #EEE;
+}
+
+/* VIEWS */
+
+/* Div wrapping each individual project in index */
+.project-wrapper {
+  border-top: 1px solid #EEE;
+  padding: 10px;
+  
+}

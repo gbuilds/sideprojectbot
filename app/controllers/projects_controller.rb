@@ -1,5 +1,5 @@
 class ProjectsController < ApplicationController
-  before_action :set_project, only: [:show, :edit, :update, :destroy]
+  before_action :set_project, only: [:edit, :update, :destroy]
   before_action :logged_in_user?, only: [:edit, :update, :destroy]
   before_action :correct_user?, only: [:edit, :update, :destroy]
 
@@ -16,7 +16,8 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    respond_with(@project)
+    @project = Project.find(params[:id])
+    @toads = @project.toads.all
   end
 
   def new

@@ -44,18 +44,36 @@ textarea {
   text-decoration: none;
 }
 
+.ideas-title {
+  font-weight: bold;
+}
+
 /* BUTTONS */
 
 .btn {
-  margin-top: 15px;
   color: white;
-  padding: 10px;
   background-color: green;
   &:hover {
     color: white;
     background-color: #004C00;
     text-decoration: none;
   }
+}
+
+.homepage-btn {
+  margin-top: 15px;
+  padding: 10px;
+}
+
+.add-toad-btn {
+  margin: 0px;
+}
+
+/* FORMS */
+
+.toad-form {
+  padding: 0px;
+  margin: 10px 0 0 0;
 }
 
 /* HEADER */
@@ -71,5 +89,19 @@ textarea {
 .project-wrapper {
   border-top: 1px solid #EEE;
   padding: 10px;
-  
+}
+
+/* Div wrapping each individual toad on the project#show view */
+.toad-partial {
+  padding: 3px;
+  p {
+    margin: 0px;
+    font-weight: bold;
+    color: green;
+  }
+}
+
+/* Div wrapping the list of toads for a project#show view */
+#toad-list {
+  margin-top: 20px;
 }

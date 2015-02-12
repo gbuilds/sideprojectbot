@@ -10,7 +10,7 @@ class ProjectsController < ApplicationController
       @projects = current_user.projects
     else
       @projects = Project.all
-      #TODO make this show only public projects and allow private projects
+      #TODO make this show only public projects and allow private/public projects
     end
     respond_with(@projects)
   end

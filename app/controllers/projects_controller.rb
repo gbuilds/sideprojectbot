@@ -1,7 +1,7 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:edit, :update, :destroy]
-  before_action :logged_in_user?, only: [:edit, :update, :destroy]
-  before_action :correct_user?, only: [:edit, :update, :destroy]
+  before_action :logged_in_user?, only: [:edit, :update, :destroy, :show]
+  before_action :correct_user?, only: [:edit, :update, :destroy, :show]
 
   respond_to :html
 
@@ -62,10 +62,8 @@ class ProjectsController < ApplicationController
   end
   
   def correct_user?
-    unless current_user.id == @project.user.id
-      flash[:warning] = "Unauthorized action"
-      redirect_to projects_path
-    end
+    @project = current_user.projects.find_by(id: params[:id])
+    redirect_to root_url if @project.nil? 
   end
   
 end

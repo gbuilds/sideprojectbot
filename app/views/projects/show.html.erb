@@ -25,7 +25,8 @@
   <h4 class="ideas-title">Ideas To Add</h4>
   <% @toads.each do |toad| %>
     <div class="toad-partial">
-      <p><%= toad.description %> | <%= link_to "Mark as Completed", "#" %></p>
+      <p><%= toad.description %> | <%= link_to "Mark as Completed", "#" %> | 
+        <%= link_to "Delete", project_toad_path(@project, toad), method: :delete %></p>
     </div>
   <% end %>
   <h4 class="ideas-title">Finished Adds</h4>

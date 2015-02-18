@@ -24,12 +24,23 @@
   <div id="toad-list" class="col-md-12">
   <h4 class="ideas-title">Ideas To Add</h4>
   <% @toads.each do |toad| %>
-    <div class="toad-partial">
-      <p><%= toad.description %> | <%= link_to "Mark as Completed", "#" %> | 
-        <%= link_to "Delete", project_toad_path(@project, toad), method: :delete %></p>
-    </div>
+    <% if toad.complete == false %>
+      <div class="toad-partial">
+        <p><%= toad.description %> | <%= link_to "Mark as Completed", 
+           complete_project_toad_path(@project, toad), method: :put %> | 
+             <%= link_to "Delete", project_toad_path(@project, toad), method: :delete %></p>
+      </div>
+    <% end %>
   <% end %>
   <h4 class="ideas-title">Finished Adds</h4>
+    <% @toads.each do |toad| %>
+      <% if toad.complete == true %>
+        <div class="toad-partial">
+          <p><%= toad.description %> | <%= link_to "Edit", '#' %> | 
+             <%= link_to "Delete", project_toad_path(@project, toad), method: :delete %></p>
+        </div>
+      <% end %>
+    <% end %>
   </div>
   <% end %>
 </div>

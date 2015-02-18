@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   resources :projects do
-    resources :toads
+    resources :toads do
+      member do
+        get :complete
+        put :complete
+      end
+    end
   end
 
   root 'static_pages#home'

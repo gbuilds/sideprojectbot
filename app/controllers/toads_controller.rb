@@ -15,6 +15,13 @@ class ToadsController < ApplicationController
     redirect_to @project
   end
   
+  def complete
+    @project = Project.find(params[:project_id])
+    @toad = Toad.find(params[:id])
+    @toad.update_attributes(complete: true)
+    redirect_to @project
+  end
+  
   private
   
   def toad_params
